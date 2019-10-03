@@ -4,7 +4,7 @@ import folium
 import os
 import webbrowser
 dirpath = os.getcwd()
-filepath = dirpath + "\\map.html"
+filepath = dirpath + "\\index.html"
 
 trnd = pd.read_csv(dirpath +"\\tornadoes.csv", dtype=object)
 trnd['BEGIN_DATE']= trnd['BEGIN_DATE'].apply(pd.to_datetime)
@@ -52,7 +52,7 @@ endmap.add_child(folium.LayerControl())
 
 legend_html =   '''
                 <div style="position: fixed; 
-                            bottom: 1%; left: 1%; width: 280px; height: 360px; margin: 30px; padding: 8px;
+                            bottom: -5px; left: -18px; width: 280px; height: 360px; margin: 30px; padding: 8px;
                             border:3px solid grey; background-color: rgb(255,255,255,0.8); z-index:9999; font-size:13px;
                             text-align:justify;">
                             <h4><b><center>US TORNADOES 2015-2019</b></h4>
